@@ -1,0 +1,129 @@
+@use "sass:math";
+@use "../utils/variables" as *; // Import variables (color gradients)
+
+/* 🌟 Common Circle Styles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.3;
+  background: linear-gradient(
+    91deg,
+    $gradient-start 9.91%,
+    $gradient-mid 53.29%,
+    $gradient-end 91.56%
+  );
+  animation: floatAnimation infinite ease-in-out alternate,
+    scaleAnimation infinite ease-in-out alternate,
+    rotateAnimation infinite linear alternate,
+    bounceAnimation infinite ease-in-out alternate;
+}
+
+/* ✅ Reusable Mixin for Circles */
+@mixin circle(
+  $size,
+  $top: auto,
+  $left: auto,
+  $right: auto,
+  $bottom: auto,
+  $duration: 10s
+) {
+  width: $size;
+  height: $size;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  animation-duration: $duration, math.div($duration, 1.5),
+    math.div($duration, 1.2), math.div($duration, 2);
+}
+
+/* 🌕 Large Circles */
+.circle-1 {
+  @include circle(160px, 5%, 10%, auto, auto, 10s);
+}
+.circle-2 {
+  @include circle(140px, 20%, auto, 15%, auto, 12s);
+}
+.circle-3 {
+  @include circle(120px, auto, 20%, auto, 10%, 14s);
+}
+
+/* 🔵 Medium Circles */
+.circle-4 {
+  @include circle(100px, 40%, 5%, auto, auto, 16s);
+}
+.circle-5 {
+  @include circle(90px, 60%, auto, 10%, auto, 18s);
+}
+.circle-6 {
+  @include circle(110px, auto, 60%, auto, 30%, 20s);
+}
+
+/* 🔸 Small Circles */
+.circle-7 {
+  @include circle(80px, 10%, auto, 40%, auto, 22s);
+}
+.circle-8 {
+  @include circle(70px, auto, 30%, auto, 50%, 24s);
+}
+.circle-9 {
+  @include circle(75px, auto, auto, 30%, 20%, 26s);
+}
+.circle-10 {
+  @include circle(90px, 70%, 50%, auto, auto, 28s);
+}
+
+/* 🌊 Floating Animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 🔄 Scaling Animation */
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 🌀 Rotation Animation */
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🏀 Bouncy Animation */
+@keyframes bounceAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  30% {
+    transform: translateY(-10px) scale(1.05);
+  }
+  50% {
+    transform: translateY(0px) scale(1);
+  }
+  70% {
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}

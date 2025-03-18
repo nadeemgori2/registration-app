@@ -1,0 +1,65 @@
+/* 🎨 🔹 Base Theme Colors */
+$primary: #628eff; // Base Blue
+$secondary: #8740cd; // Base Purple
+$success: #4caf50; // Success Green
+$error: #f44336; // Error Red
+$warning: #ff9800; // Warning Orange
+$info: #17a2b8; // Info Cyan
+$disabled: #897493; // Muted Gray
+$white: #ffffff;
+$bg-color: #f4f6f8;
+
+/* 🎨 🔹 Gradients */
+$gradient-start: $primary; // Light Blue
+$gradient-mid: $secondary; // Vibrant Purple
+$gradient-end: #580475; // Deep Purple
+
+/* 🎨 🔹 Dark Gradients */
+$gradient-black: #000000;
+$gradient-darkest-purple: #0b0014;
+$gradient-darker-purple: #140021;
+$gradient-deep-purple: #1a002d;
+$gradient-rich-purple: #2a003d;
+
+/* 🎨 🔹 Error Gradients */
+$error-gradient-start: #ff6b6b;
+$error-gradient-mid: #ff3b3b;
+$error-gradient-end: #c70039;
+$error-hover-mid: #c70039;
+$error-hover-end: #900c3f;
+
+/* 🖋 🔹 Typography */
+$font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$text-light: #e0e0e0;
+$text-dark: #000000;
+$text-muted: #757575;
+
+/* 🎨 🔹 UI Elements */
+$border-radius-default: 8px;
+$border-radius-small: 5px;
+$border-radius-large: 12px;
+$disabled-opacity: 0.6;
+
+/* 🎨 🔹 Buttons */
+$button-primary-bg: $primary;
+$button-primary-text: #ffffff;
+$button-secondary-bg: $secondary;
+$button-secondary-text: #ffffff;
+$button-disabled-bg: $disabled;
+$button-disabled-text: #ffffff;
+
+/* 🎨 🔹 Tooltips */
+$tooltip-bg: #2c2c2c;
+$tooltip-text: #ffffff;
+$tooltip-font-size: 12px;
+
+/* 🎨 🔹 Popups */
+$popup-overlay-bg: rgba(0, 0, 0, 0.5);
+$popup-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+$close-btn-bg: #000000;
+$close-btn-text: #ffffff;
+
+/* 🎨 🔹 Shadows */
+$shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.2);
+$shadow-heavy: 0 6px 15px rgba(0, 0, 0, 0.3);

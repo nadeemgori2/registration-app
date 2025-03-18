@@ -1,0 +1,11 @@
+/* 🎨 🔹 Import Variables & Base Styles */
+@use "utils/variables" as *;
+@use "bootstrap/scss/bootstrap";
+@use "base/reset";
+
+/* 🎨 🔹 Import Component Styles */
+@use "components/form";
+@use "components/registration";
+@use "components/thankyou";
+@use "components/userexists";
+@use "components/errorPopup";

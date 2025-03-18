@@ -1,0 +1,70 @@
+@use "sass:color";
+@use "../utils/variables" as *;
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $popup-overlay-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px); // Enhances visual clarity
+}
+
+.popup-content {
+  background: linear-gradient(
+    180deg,
+    $gradient-start 0%,
+    $gradient-mid 50%,
+    $gradient-end 100%
+  );
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: $popup-shadow;
+  text-align: center;
+  max-width: 450px;
+  width: 90vw;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: $text-light;
+}
+
+.close-btn {
+  background: $close-btn-bg;
+  color: $close-btn-text;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: $border-radius-small;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: color.adjust($close-btn-bg, $lightness: 10%);
+    transform: scale(1.05);
+    outline: none;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .popup-content {
+    max-width: 90%;
+    width: 90vw;
+    min-height: 160px;
+    padding: 15px;
+  }
+
+  .close-btn {
+    margin-top: 0;
+    width: 100%;
+  }
+}
